@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE data SYSTEM "http://www.woltlab.com/DTDs/options.dtd">
+<data>
+	<import>
+		<categories>
+			<category name="message.filterguestview">
+				<parent>message</parent>
+			</category>
+		</categories>
+
+		<options>
+			<option name="message_filter_guest_view_enabled">
+				<categoryname>message.filterguestview</categoryname>
+				<optiontype>boolean</optiontype>
+				<showorder>1</showorder>
+				<default>0</default>
+			</option>
+			<option name="message_filter_guest_view">
+				<categoryname>message.filterguestview</categoryname>
+				<optiontype>textarea</optiontype>
+				<showorder>2</showorder>
+			</option>
+		</options>
+	</import>
+</data>

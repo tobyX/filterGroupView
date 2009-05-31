@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE package SYSTEM "DTD/package.dtd">
+<package name="com.toby.wbb.filterguestview">
+
+	<packageInformation>
+		<packageName>Filter Guest View</packageName>
+		<isUnique>1</isUnique>
+		<packageDescription>Themenansicht für Gäste filtern, d.h. bestimmte Begriffe ersetzen lassen</packageDescription>
+		<standalone>0</standalone>
+		<version>1.1.0</version>
+		<date>2009-05-17</date>
+		<plugin>com.woltlab.wbb</plugin>
+	</packageInformation>
+
+	<authorInformation>
+		<author>Tobias Friebel</author>
+		<authorURL>http://www.enigma-forum.de</authorURL>
+		<license>GPL</license>
+	</authorInformation>
+
+	<requiredpackages>
+		<requiredpackage minversion="3.0.9">com.woltlab.wbb</requiredpackage>
+	</requiredpackages>
+
+	<instructions type="install">
+		<languages languagecode="de">de.utf-8.xml</languages>
+		<languages languagecode="de-informal">de-informal.utf-8.xml</languages>
+		<languages languagecode="en">en.utf-8.xml</languages>
+		<files>files.tar</files>
+		<eventlistener>eventlistener.xml</eventlistener>
+		<options>options.xml</options>
+	</instructions>
+
+	<instructions type="update" fromversion="1.0*">
+		<files>files.tar</files>
+		<eventlistener>eventlistener.xml</eventlistener>
+		<languages languagecode="de">de.utf-8.xml</languages>
+		<languages languagecode="de-informal">de-informal.utf-8.xml</languages>
+		<languages languagecode="en">en.utf-8.xml</languages>
+	</instructions>
+
+</package>

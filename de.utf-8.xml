@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE language SYSTEM "DTD/language.dtd">
+<language languagecode="de">
+
+	<category name="wcf.acp.option">
+		<item name="wcf.acp.option.category.message.filterguestview"><![CDATA[Gästeansicht filtern]]></item>
+		<item name="wcf.acp.option.category.message.filterguestview.description"><![CDATA[Hiermit können Sie alle Beiträge für Gäste filtern lassen.]]></item>
+		<item name="wcf.acp.option.message_filter_guest_view"><![CDATA[Filterbegriffe]]></item>
+		<item name="wcf.acp.option.message_filter_guest_view.description"><![CDATA[Geben Sie hier eine Liste mit Worten und Begriffen an, die Sie filtern lassen wollen. Sie können * als Platzhalter verwenden. Nähere Informationen über die Filter finden Sie unter: http://wbbmods.tobyf.de/trac/wiki/FilterGuestView]]></item>
+		<item name="wcf.acp.option.message_filter_guest_view_enabled"><![CDATA[Filter aktivieren]]></item>
+		<item name="wcf.acp.option.message_filter_guest_view_enabled.description"><![CDATA[]]></item>
+	</category>
+
+	<category name="wbb.thread">
+		<item name="wbb.thread.filterguestmessage"><![CDATA[ [url='{PAGE_URL}/index.php?page=Register'](Dieser Begriff wurde für Gäste und nicht aktivierte Benutzer ausgeblendet. Um ihn doch lesen zu können sollten Sie sich registrieren!)[/url] ]]></item>
+		<item name="wbb.thread.filterguestmessage.html"><![CDATA[ <a href="{PAGE_URL}/index.php?page=Register">(Dieser Begriff wurde für Gäste und nicht aktivierte Benutzer ausgeblendet. Um ihn doch lesen zu können sollten Sie sich registrieren!)</a> ]]></item>
+	</category>
+
+</language>

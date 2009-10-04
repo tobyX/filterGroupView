@@ -15,5 +15,9 @@
 		<item name="wbb.thread.filterguestmessage"><![CDATA[ [url='{PAGE_URL}/index.php?page=Register'](Dieser Begriff wurde für Gäste und nicht aktivierte Benutzer ausgeblendet. Um ihn doch lesen zu können sollten Sie sich registrieren!)[/url] ]]></item>
 		<item name="wbb.thread.filterguestmessage.html"><![CDATA[ <a href="{PAGE_URL}/index.php?page=Register">(Dieser Begriff wurde für Gäste und nicht aktivierte Benutzer ausgeblendet. Um ihn doch lesen zu können sollten Sie sich registrieren!)</a> ]]></item>
 	</category>
+	
+	<category name="wbb.acp.board">
+		<item name="wbb.acp.board.enableFilterGuestView"><![CDATA[Gästefilter für dieses Forum aktivieren]]></item>
+	</category>
 
 </language>

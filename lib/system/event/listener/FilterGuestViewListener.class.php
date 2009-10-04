@@ -23,7 +23,8 @@ class FilterGuestViewListener implements EventListener
 	 */
 	public function execute($eventObj, $className, $eventName)
 	{
-		if ((WCF :: getUser()->userID != 0 && !WCF :: getUser()->activationCode) || !MESSAGE_FILTER_GUEST_VIEW_ENABLED)
+		if ((WCF :: getUser()->userID != 0 && !WCF :: getUser()->activationCode) || 
+			!MESSAGE_FILTER_GUEST_VIEW_ENABLED || $eventObj->board->enableFilterGuestView == 0)
 			return;
 
 		$filterRules = explode("\n", preg_replace("/\r+/", '', MESSAGE_FILTER_GUEST_VIEW));

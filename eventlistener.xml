@@ -17,5 +17,27 @@
 			<eventName>assignVariables</eventName>
 			<listenerClassFile>lib/system/event/listener/FilterGuestViewPostsFeedListener.class.php</listenerClassFile>
 		</eventlistener>
+		
+		<eventlistener>
+			<eventClassName>BoardAddForm</eventClassName>
+			<eventName>assignVariables</eventName>
+			<listenerClassFile>lib/system/event/listener/FilterGuestViewACPListener.class.php</listenerClassFile>
+			<environment>admin</environment>
+			<inherit>1</inherit>
+		</eventlistener>
+		<eventlistener>
+			<eventClassName>BoardAddForm</eventClassName>
+			<eventName>readFormParameters</eventName>
+			<listenerClassFile>lib/system/event/listener/FilterGuestViewACPListener.class.php</listenerClassFile>
+			<environment>admin</environment>
+			<inherit>1</inherit>
+		</eventlistener>
+		<eventlistener>
+			<eventClassName>BoardAddForm</eventClassName>
+			<eventName>save</eventName>
+			<listenerClassFile>lib/system/event/listener/FilterGuestViewACPListener.class.php</listenerClassFile>
+			<environment>admin</environment>
+			<inherit>1</inherit>
+		</eventlistener>
 	</import>
 </data>

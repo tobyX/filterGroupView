@@ -7,8 +7,8 @@
 		<isUnique>1</isUnique>
 		<packageDescription>Themenansicht für Gäste filtern, d.h. bestimmte Begriffe ersetzen lassen</packageDescription>
 		<standalone>0</standalone>
-		<version>1.1.0</version>
-		<date>2009-05-17</date>
+		<version>1.2.0</version>
+		<date>2009-10-04</date>
 		<plugin>com.woltlab.wbb</plugin>
 	</packageInformation>
 
@@ -29,6 +29,8 @@
 		<files>files.tar</files>
 		<eventlistener>eventlistener.xml</eventlistener>
 		<options>options.xml</options>
+		<acptemplates>acptemplates.tar</acptemplates>
+		<sql>install.sql</sql>
 	</instructions>
 
 	<instructions type="update" fromversion="1.0*">
@@ -37,6 +39,18 @@
 		<languages languagecode="de">de.utf-8.xml</languages>
 		<languages languagecode="de-informal">de-informal.utf-8.xml</languages>
 		<languages languagecode="en">en.utf-8.xml</languages>
+		<acptemplates>acptemplates.tar</acptemplates>
+		<sql>install.sql</sql>
+	</instructions>
+	
+	<instructions type="update" fromversion="1.1*">
+		<files>files.tar</files>
+		<eventlistener>eventlistener.xml</eventlistener>
+		<languages languagecode="de">de.utf-8.xml</languages>
+		<languages languagecode="de-informal">de-informal.utf-8.xml</languages>
+		<languages languagecode="en">en.utf-8.xml</languages>
+		<acptemplates>acptemplates.tar</acptemplates>
+		<sql>install.sql</sql>
 	</instructions>
 
 </package>

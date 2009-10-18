@@ -8,7 +8,7 @@
 		<packageDescription>Themenansicht für Gäste filtern, d.h. bestimmte Begriffe ersetzen lassen</packageDescription>
 		<standalone>0</standalone>
 		<version>1.2.0</version>
-		<date>2009-10-04</date>
+		<date>2009-10-18</date>
 		<plugin>com.woltlab.wbb</plugin>
 	</packageInformation>
 
@@ -19,7 +19,8 @@
 	</authorInformation>
 
 	<requiredpackages>
-		<requiredpackage minversion="3.1.0 Beta 1">com.woltlab.wbb</requiredpackage>
+		<requiredpackage minversion="3.1.0">com.woltlab.wbb</requiredpackage>
+		<requiredpackage minversion="1.1.0">com.woltlab.wcf</requiredpackage>
 	</requiredpackages>
 
 	<instructions type="install">

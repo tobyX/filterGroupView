@@ -29,11 +29,10 @@ class FilterGuestViewThreadsFeedListener implements EventListener
 		$filterRules = explode("\n", preg_replace("/\r+/", '', MESSAGE_FILTER_GUEST_VIEW));
 		$filterRules = ArrayUtil :: trim($filterRules);
 
-		$c = count($eventObj->threads);
-		for ($i = 0; $i < $c; $i++)
+		foreach ($eventObj->threads as $id => $threadObj)
 		{
-			if ($eventObj->threads[$i]->post)
-				$text = $eventObj->threads[$i]->post->message;
+			if ($threadObj->post)
+				$text = $threadObj->post->message;
 			else
 				continue;
 
@@ -46,7 +45,7 @@ class FilterGuestViewThreadsFeedListener implements EventListener
 				$text = preg_replace($filterRule, WCF::getLanguage()->get('wbb.thread.filterguestmessage', array('PAGE_URL' => PAGE_URL)) , $text);
 			}
 
-			$eventObj->threads[$i]->post->message = $text;
+			$eventObj->threads[$id]->post->message = $text;
 		}
 	}
 }

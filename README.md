@@ -25,14 +25,14 @@ Das ist notwendig, weil neuere Beiträge gecacht sind und daher direkt in HTML v
 
 Beispiele
 
-z.B. kann man alle URLs ausblenden: <a href=\"http://*>*</a> Man gebe diesen String an und aus allen URLs wird "(Dieser Begriff wurde für Gäste ausgeblendet. Um ihn doch lesen zu können sollten Sie sich anmelden!)" Man will einen Link auf die Registrierung setzen.
+z.B. kann man alle URLs ausblenden: `<a href=\"http://*>*</a>` Man gebe diesen String an und aus allen URLs wird "(Dieser Begriff wurde für Gäste ausgeblendet. Um ihn doch lesen zu können sollten Sie sich anmelden!)" Man will einen Link auf die Registrierung setzen.
 Dazu schreibt man in
 
-wbb.thread.filterguestmessage: [url='index.php?page=Register']TEXT[/url]
+wbb.thread.filterguestmessage: `[url='index.php?page=Register']TEXT[/url]`
 
 und in
 
-wbb.thread.filterguestmessage.html: <a href=\"index.php?page=Register\">TEXT</a>
+wbb.thread.filterguestmessage.html: `<a href=\"index.php?page=Register\">TEXT</a>`
 
 
 Diverse Regular Expressions

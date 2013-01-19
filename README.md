@@ -53,28 +53,21 @@ Diverse Regular Expressions
         [video]*[/video]
 
     Quotes:
+		HTML: <blockquote class="quoteBox">*</blockquote>
+    	BB-Code: [quote*
 
-    HTML: <blockquote class="quoteBox">*</blockquote>
-    BB-Code: [quote*
+	Codeblöcke (PHP, MySQL, usw):
+	    HTML: <div class="codeBox">*<div>*<table>*</table>*</div>*</div>
+	    BB-Code:
+	    [code]*code]
+	    [php]*[/php]
+	    [mysql]*[/mysql]
 
-
-Codeblöcke (PHP, MySQL, usw):
-
-    HTML: <div class="codeBox">*<div>*<table>*</table>*</div>*</div>
-    BB-Code:
-    [code]*code]
-    [php]*[/php]
-    [mysql]*[/mysql]
-
-Bilder:
-
-    HTML: <img*>
-    BB-Code:
-    [img]*[/img]
-
+	Bilder:
+	    HTML: <img*>
+	    BB-Code:
+	    [img]*[/img]
 
 Links
-
-    Beispiel: Allgemein gnod
     Regular Expressions: http://www.regenechsen.de/phpwcms/index.php?regex
     RegEx?-Modifikatoren: http://www.regenechsen.de/phpwcms/index.php?regex_allg_liste

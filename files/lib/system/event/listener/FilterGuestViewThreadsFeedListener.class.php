@@ -9,6 +9,7 @@
  */
 
 require_once (WCF_DIR . 'lib/system/event/EventListener.class.php');
+require_once (WBB_DIR . 'lib/util/FilterGuestView.class.php');
 
 /**
  * Filter threadview for guests
@@ -26,9 +27,6 @@ class FilterGuestViewThreadsFeedListener implements EventListener
 		if ((WCF :: getUser()->userID != 0 && !WCF :: getUser()->activationCode) || !MESSAGE_FILTER_GUEST_VIEW_ENABLED)
 			return;
 
-		$filterRules = explode("\n", preg_replace("/\r+/", '', MESSAGE_FILTER_GUEST_VIEW));
-		$filterRules = ArrayUtil :: trim($filterRules);
-
 		foreach ($eventObj->threads as $id => $threadObj)
 		{
 			if ($threadObj->post)
@@ -36,17 +34,9 @@ class FilterGuestViewThreadsFeedListener implements EventListener
 			else
 				continue;
 
-			foreach ($filterRules as $filterRule)
-			{
-				$filterRule = preg_quote($filterRule, '/');
-				$filterRule = str_replace('\*', '.*', $filterRule);
-				$filterRule = '/'.$filterRule.'/isU';
+			$filtered = FilterGuestView :: filter($text);
 
-				$text = preg_replace($filterRule, WCF::getLanguage()->get('wbb.thread.filterguestmessage', array('PAGE_URL' => PAGE_URL)) , $text);
-			}
-
-			$eventObj->threads[$id]->post->message = $text;
+			$eventObj->threads[$id]->post->message = $filtered[0];
 		}
 	}
 }
-?>

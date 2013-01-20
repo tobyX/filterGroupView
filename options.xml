@@ -30,16 +30,31 @@
 				<optiontype>boolean</optiontype>
 				<showorder>4</showorder>
 			</option>
+			<option name="message_filter_guest_view_quotes">
+				<categoryname>message.filterguestview</categoryname>
+				<optiontype>boolean</optiontype>
+				<showorder>5</showorder>
+			</option>
+			<option name="message_filter_guest_view_code">
+				<categoryname>message.filterguestview</categoryname>
+				<optiontype>boolean</optiontype>
+				<showorder>6</showorder>
+			</option>
 			<option name="message_filter_guest_view_shorten">
 				<categoryname>message.filterguestview</categoryname>
 				<optiontype>integer</optiontype>
-				<showorder>4</showorder>
-				<default>-1</default>
+				<showorder>7</showorder>
+				<default>0</default>
 			</option>
 			<option name="message_filter_guest_view">
 				<categoryname>message.filterguestview</categoryname>
 				<optiontype>textarea</optiontype>
-				<showorder>2</showorder>
+				<showorder>8</showorder>
+			</option>
+			<option name="message_filter_guest_view_html">
+				<categoryname>message.filterguestview</categoryname>
+				<optiontype>textarea</optiontype>
+				<showorder>9</showorder>
 			</option>
 		</options>
 	</import>

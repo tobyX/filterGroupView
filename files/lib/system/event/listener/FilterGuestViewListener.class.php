@@ -9,6 +9,7 @@
  */
 
 require_once (WCF_DIR . 'lib/system/event/EventListener.class.php');
+require_once (WBB_DIR . 'lib/util/FilterGuestView.class.php');
 
 /**
  * Filter threadview for guests
@@ -27,27 +28,15 @@ class FilterGuestViewListener implements EventListener
 			!MESSAGE_FILTER_GUEST_VIEW_ENABLED || $eventObj->board->enableFilterGuestView == 0)
 			return;
 
-		$filterRules = explode("\n", preg_replace("/\r+/", '', MESSAGE_FILTER_GUEST_VIEW));
-		$filterRules = ArrayUtil :: trim($filterRules);
-
 		foreach ($eventObj->postList->posts as $id => $postObj)
 		{
 			$textCache = $postObj->messageCache;
 			$text = $postObj->message;
 
-			foreach ($filterRules as $filterRule)
-			{
-				$filterRule = preg_quote($filterRule, '/');
-				$filterRule = str_replace('\*', '.*', $filterRule);
-				$filterRule = '/'.$filterRule.'/isU';
+			$filtered = FilterGuestView :: filter($text, $textCache);
 
-				$textCache = preg_replace($filterRule, WCF::getLanguage()->get('wbb.thread.filterguestmessage.html', array('PAGE_URL' => PAGE_URL)) , $textCache);
-				$text = preg_replace($filterRule, WCF::getLanguage()->get('wbb.thread.filterguestmessage', array('PAGE_URL' => PAGE_URL)) , $text);
-			}
-
-			$eventObj->postList->posts[$id]->messageCache = $textCache;
-			$eventObj->postList->posts[$id]->message = $text;
+			$eventObj->postList->posts[$id]->message = $filtered[0];
+			$eventObj->postList->posts[$id]->messageCache = $filtered[1];
 		}
 	}
 }
-?>

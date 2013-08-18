@@ -1,21 +1,22 @@
 <?xml version="1.0"?>
 <!DOCTYPE package SYSTEM "DTD/package.dtd">
-<package name="com.toby.wbb.filterguestview">
+<package name="com.toby.wbb.filtergroupview">
 
 	<packageInformation>
-		<packageName>Filter Guest View</packageName>
+		<packageName>Filter Group View</packageName>
 		<isUnique>1</isUnique>
-		<packageDescription>Themenansicht für Gäste filtern, d.h. bestimmte Begriffe ersetzen lassen</packageDescription>
+		<packageDescription>Themenansicht für beliebige Gruppen filtern, d.h. bestimmte Begriffe ersetzen lassen</packageDescription>
 		<standalone>0</standalone>
-		<version>2.0.0 alpha 1</version>
-		<date>2013-01-20</date>
+		<version>1.0.0</version>
+		<date>2013-08-18</date>
 		<plugin>com.woltlab.wbb</plugin>
 	</packageInformation>
 
 	<authorInformation>
 		<author>Tobias Friebel</author>
 		<authorURL>http://www.enigma-forum.de</authorURL>
-		<license>GPL</license>
+		<license>CC BY-NC-ND 3.0</license>
+		<licenseURL>http://creativecommons.org/licenses/by-nc-nd/3.0/</licenseURL>
 	</authorInformation>
 
 	<requiredpackages>
@@ -30,39 +31,7 @@
 		<files>files.tar</files>
 		<eventlistener>eventlistener.xml</eventlistener>
 		<options>options.xml</options>
-		<acptemplates>acptemplates.tar</acptemplates>
-		<sql>install.sql</sql>
-	</instructions>
-
-	<instructions type="update" fromversion="1.2.1">
-		<files>files.tar</files>
-		<options>options.xml</options>
-		<languages languagecode="de">de.utf-8.xml</languages>
-		<languages languagecode="de-informal">de-informal.utf-8.xml</languages>
-		<languages languagecode="en">en.utf-8.xml</languages>
-	</instructions>
-
-	<instructions type="update" fromversion="1.2.0">
-		<files>files.tar</files>
-	</instructions>
-
-	<instructions type="update" fromversion="1.0*">
-		<files>files.tar</files>
-		<eventlistener>eventlistener.xml</eventlistener>
-		<languages languagecode="de">de.utf-8.xml</languages>
-		<languages languagecode="de-informal">de-informal.utf-8.xml</languages>
-		<languages languagecode="en">en.utf-8.xml</languages>
-		<acptemplates>acptemplates.tar</acptemplates>
-		<sql>install.sql</sql>
-	</instructions>
-
-	<instructions type="update" fromversion="1.1*">
-		<files>files.tar</files>
-		<eventlistener>eventlistener.xml</eventlistener>
-		<languages languagecode="de">de.utf-8.xml</languages>
-		<languages languagecode="de-informal">de-informal.utf-8.xml</languages>
-		<languages languagecode="en">en.utf-8.xml</languages>
-		<acptemplates>acptemplates.tar</acptemplates>
+		<groupoptions>groupoptions.xml</groupoptions>
 		<sql>install.sql</sql>
 	</instructions>
 

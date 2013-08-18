@@ -3,58 +3,57 @@
 <data>
 	<import>
 		<categories>
-			<category name="message.filterguestview">
-				<parent>message</parent>
+			<category name="board.post.filter">
+				<parent>board.post</parent>
 			</category>
 		</categories>
 
 		<options>
-			<option name="message_filter_guest_view_enabled">
-				<categoryname>message.filterguestview</categoryname>
+			<option name="module_filter_content">
+				<categoryname>module.content</categoryname>
 				<optiontype>boolean</optiontype>
-				<showorder>1</showorder>
 				<default>0</default>
 			</option>
-			<option name="message_filter_guest_view_links">
-				<categoryname>message.filterguestview</categoryname>
+			<option name="module_filter_feeds">
+				<categoryname>module.content</categoryname>
+				<optiontype>boolean</optiontype>
+				<default>0</default>
+			</option>
+			<option name="message_filter_group_view_links">
+				<categoryname>board.post.filter</categoryname>
+				<optiontype>boolean</optiontype>
+				<showorder>1</showorder>
+			</option>
+			<option name="message_filter_group_view_images">
+				<categoryname>board.post.filter</categoryname>
 				<optiontype>boolean</optiontype>
 				<showorder>2</showorder>
 			</option>
-			<option name="message_filter_guest_view_images">
-				<categoryname>message.filterguestview</categoryname>
+			<option name="message_filter_group_view_objects">
+				<categoryname>board.post.filter</categoryname>
 				<optiontype>boolean</optiontype>
 				<showorder>3</showorder>
 			</option>
-			<option name="message_filter_guest_view_objects">
-				<categoryname>message.filterguestview</categoryname>
+			<option name="message_filter_group_view_quotes">
+				<categoryname>board.post.filter</categoryname>
 				<optiontype>boolean</optiontype>
 				<showorder>4</showorder>
 			</option>
-			<option name="message_filter_guest_view_quotes">
-				<categoryname>message.filterguestview</categoryname>
+			<option name="message_filter_group_view_code">
+				<categoryname>board.post.filter</categoryname>
 				<optiontype>boolean</optiontype>
 				<showorder>5</showorder>
 			</option>
-			<option name="message_filter_guest_view_code">
-				<categoryname>message.filterguestview</categoryname>
-				<optiontype>boolean</optiontype>
-				<showorder>6</showorder>
-			</option>
-			<option name="message_filter_guest_view_shorten">
-				<categoryname>message.filterguestview</categoryname>
+			<option name="message_filter_group_view_shorten">
+				<categoryname>board.post.filter</categoryname>
 				<optiontype>integer</optiontype>
+				<showorder>6</showorder>
+				<defaultvalue>-1</defaultvalue>
+			</option>
+			<option name="message_filter_group_view">
+				<categoryname>board.post.filter</categoryname>
+				<optiontype>textarea</optiontype>
 				<showorder>7</showorder>
-				<default>0</default>
-			</option>
-			<option name="message_filter_guest_view">
-				<categoryname>message.filterguestview</categoryname>
-				<optiontype>textarea</optiontype>
-				<showorder>8</showorder>
-			</option>
-			<option name="message_filter_guest_view_html">
-				<categoryname>message.filterguestview</categoryname>
-				<optiontype>textarea</optiontype>
-				<showorder>9</showorder>
 			</option>
 		</options>
 	</import>

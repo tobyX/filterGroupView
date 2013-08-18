@@ -3,36 +3,41 @@
 <language languagecode="en">
 
 	<category name="wcf.acp.option">
-		<item name="wcf.acp.option.category.message.filterguestview"><![CDATA[Filter Guestview]]></item>
-		<item name="wcf.acp.option.category.message.filterguestview.description"><![CDATA[With this you can filter all postings for guests.]]></item>
-		<item name="wcf.acp.option.message_filter_guest_view"><![CDATA[Own filters for BBCodes]]></item>
-		<item name="wcf.acp.option.message_filter_guest_view.description"><![CDATA[Enter a list of words and terms that you want to filter. You can use * as a wildcard. You will find more informations under http://wbbmods.tobyf.de/trac/wiki/FilterGuestView]]></item>
-		<item name="wcf.acp.option.message_filter_guest_view_enabled"><![CDATA[Activate filter]]></item>
-		<item name="wcf.acp.option.message_filter_guest_view_enabled.description"><![CDATA[]]></item>
-		<item name="wcf.acp.option.message_filter_guest_view_links"><![CDATA[Filter links]]></item>
-		<item name="wcf.acp.option.message_filter_guest_view_links.description"><![CDATA[Replaces all links, regardless if email or url, internal or external.]]></item>
-		<item name="wcf.acp.option.message_filter_guest_view_images"><![CDATA[Filter images]]></item>
-		<item name="wcf.acp.option.message_filter_guest_view_images.description"><![CDATA[Replaces all images.]]></item>
-		<item name="wcf.acp.option.message_filter_guest_view_objects"><![CDATA[Filter objects]]></item>
-		<item name="wcf.acp.option.message_filter_guest_view_objects.description"><![CDATA[Replaces embedded objects like videos.]]></item>
-		<item name="wcf.acp.option.message_filter_guest_view_quotes"><![CDATA[Filter Quotes]]></item>
-		<item name="wcf.acp.option.message_filter_guest_view_quotes.description"><![CDATA[Replaces quotes.]]></item>
-		<item name="wcf.acp.option.message_filter_guest_view_code"><![CDATA[Filter codes]]></item>
-		<item name="wcf.acp.option.message_filter_guest_view_code.description"><![CDATA[Replaces codeblocks like mysql, php and so on.]]></item>
-		<item name="wcf.acp.option.message_filter_guest_view_shorten"><![CDATA[Shorten text]]></item>
-		<item name="wcf.acp.option.message_filter_guest_view_shorten.description"><![CDATA[Truncate text to the given number of characters. Zero disables this feature.]]></item>
-		<item name="wcf.acp.option.message_filter_guest_view_html"><![CDATA[Own filters for HTML]]></item>
-		<item name="wcf.acp.option.message_filter_guest_view_html.description"><![CDATA[Enter a list of words and terms that you want to filter. You can use * as a wildcard. You will find more informations under http://wbbmods.tobyf.de/trac/wiki/FilterGuestView]]></item>
+		<item name="wcf.acp.option.category.board.post.filter"><![CDATA[Messagefilter]]></item>
+		<item name="wcf.acp.option.category.board.post.filter.description"><![CDATA[]]></item>
+		<item name="wcf.acp.option.message_filter_group_view"><![CDATA[Own filters for BBCodes]]></item>
+		<item name="wcf.acp.option.message_filter_group_view.description"><![CDATA[Enter a list of words and terms that you want to filter. You can use * as a wildcard.]]></item>
+		<item name="wcf.acp.option.message_filter_group_view_links"><![CDATA[Filter links]]></item>
+		<item name="wcf.acp.option.message_filter_group_view_links.description"><![CDATA[Replaces all links, regardless if email or url, internal or external.]]></item>
+		<item name="wcf.acp.option.message_filter_group_view_images"><![CDATA[Filter images]]></item>
+		<item name="wcf.acp.option.message_filter_group_view_images.description"><![CDATA[Replaces all images.]]></item>
+		<item name="wcf.acp.option.message_filter_group_view_objects"><![CDATA[Filter objects]]></item>
+		<item name="wcf.acp.option.message_filter_group_view_objects.description"><![CDATA[Replaces embedded objects like videos.]]></item>
+		<item name="wcf.acp.option.message_filter_group_view_quotes"><![CDATA[Filter Quotes]]></item>
+		<item name="wcf.acp.option.message_filter_group_view_quotes.description"><![CDATA[Replaces quotes.]]></item>
+		<item name="wcf.acp.option.message_filter_group_view_code"><![CDATA[Filter codes]]></item>
+		<item name="wcf.acp.option.message_filter_group_view_code.description"><![CDATA[Replaces codeblocks like mysql, php and so on.]]></item>
+		<item name="wcf.acp.option.message_filter_group_view_shorten"><![CDATA[Shorten text]]></item>
+		<item name="wcf.acp.option.message_filter_group_view_shorten.description"><![CDATA[Truncate text to the given number of characters. -1 disables this feature.]]></item>
+		<item name="wcf.acp.option.module_filter_content"><![CDATA[Filter]]></item>
+		<item name="wcf.acp.option.module_filter_content.description"><![CDATA[Enables the option to filter postings for some groups.]]></item>
+		<item name="wcf.acp.option.module_filter_feeds"><![CDATA[Filter Feeds]]></item>
+		<item name="wcf.acp.option.module_filter_feeds.description"><![CDATA[Enables filtering of feeds, independently of any group rights. Without this option feeds are never filtered.]]></item>
 
+	</category>
+
+	<category name="wcf.acp.group">
+		<item name="wcf.acp.group.option.user.board.canViewFilteredContent"><![CDATA[Can see filtered content]]></item>
+		<item name="wcf.acp.group.option.user.board.canViewFilteredContent.description"><![CDATA[Members of this usergroup can see filtered contents.]]></item>
 	</category>
 
 	<category name="wbb.thread">
-		<item name="wbb.thread.filterguestmessage"><![CDATA[ [url='{PAGE_URL}/index.php?page=Register'](This term was hidden for guests and not activated Users. To be able to read it you should register!)[/url] ]]></item>
-		<item name="wbb.thread.filterguestmessage.html"><![CDATA[ <a href="{PAGE_URL}/index.php?page=Register">(This term was hidden for guests and not activated Users. To be able to read it you should register!)</a> ]]></item>
+		<item name="wbb.thread.filtergroupmessage"><![CDATA[ [url='{PAGE_URL}/index.php?page=Register'](This term was hidden for you. To be able to read it you should register or let you unlock!)[/url] ]]></item>
+		<item name="wbb.thread.filtergroupmessage.html"><![CDATA[ <a href="{PAGE_URL}/index.php?page=Register">(This term was hidden for you. To be able to read it you should register or let you unlock!)</a> ]]></item>
 	</category>
 
 	<category name="wbb.acp.board">
-		<item name="wbb.acp.board.enableFilterGuestView"><![CDATA[Activate guestview filter for this forum]]></item>
+		<item name="wbb.acp.board.permissions.canViewFilteredContent"><![CDATA[Can see filtered content]]></item>
 	</category>
 
 </language>

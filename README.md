@@ -1,73 +1,35 @@
-filterGuestView
+filterGroupView
 ===============
 
-Plugin for WBB forum, allows to filter the display of posts for guests
+Plugin for WBB forum, allows to filter the display of posts for any groups
 
 Features
- * Es können beliebige feste oder variable Begriffe durch einen anderen Begriff ausgeblendet werden (auch mehrzeilig)
- * Das Plugin wirkt auf alle Beiträge die ein Gast sehen kann
- * Man kann es ein- und ausschalten, auch pro Forum
- * deutsch, deutsch-du und english liegen bei
+ * Es können vorgegebene Begriffe gefiltert werden, aber natürlich auch eigene Begriffe
+ * Das Plugin wirkt auf alle Beiträge und kann durch Gruppenrechte verändert werden.
+ * Man kann es pro Forum für Benutzer oder Gruppen ein- oder ausschalten
+ * de, de-informal und en liegen bei
+ * Man kann Beiträge kürzen lassen
 
 
 Beschreibung/Anwendung
-Man kann natürlich beliebige Begriffe wählen, von denen man nicht will, das Gäste sie sehen können.
-Die Ersetzung kann natürlich beliebig angepasst werden,
-die Variablen heißen wbb.thread.filterguestmessage und wbb.thread.filterguestmessage.html.
-
-wbb.thread.filterguestmessage.html wirkt bei gecachten Beiträgen, dort kann man (nur) HTML einsetzen.
+Man kann natürlich beliebige Begriffe wählen, von denen man nicht will, das jemand sie sehen kann.
+Die Ersetzung kann natürlich beliebig angepasst werden, die Variablen heißen wbb.thread.filterguestmessage.
 wbb.thread.filterguestmessage ist per BBCode zu formatieren.
+Es gibt zusätzlich noch wbb.thread.filtergrouptruncatedmessage, was bei gekürzten Beiträgen verwendet wird.
 
-Die Plugin-Optionen finden sich unter System => Optionen => Nachrichten => Gästeansicht filtern.
 Derzeit wirken die Modifikatoren isU auf den RegEx.
-Achtung! Um korrekt alle Beiträge zu filtern muss man sowohl nach BB-Code wie auch nach HTML filtern!
-Das ist notwendig, weil neuere Beiträge gecacht sind und daher direkt in HTML vorliegen und nicht extra geparst werden!
+Es muss nur noch nach BBCode gefiltert werden, bei gecachten Beiträgen wird der Cache genullt. Das kann die Performance beeinträchtigen.
 
-Beispiele
+Die Optionen finden sich unter:
 
-z.B. kann man alle URLs ausblenden: `<a href=\"http://*>*</a>` Man gebe diesen String an und aus allen URLs wird "(Dieser Begriff wurde für Gäste ausgeblendet. Um ihn doch lesen zu können sollten Sie sich anmelden!)" Man will einen Link auf die Registrierung setzen.
-Dazu schreibt man in
+System -> Optionen -> Module an/aus -> Inhalte -> Filter / Filter Feeds
+System -> Optionen -> Forum -> Beiträge -> Beitragsinhalte filtern
 
-wbb.thread.filterguestmessage: `[url='index.php?page=Register']TEXT[/url]`
+Das Gruppenrecht findet sich unter:
 
-und in
+Allgemeine Rechte -> Forum -> Kann gefilterte Inhalte sehen
 
-wbb.thread.filterguestmessage.html: `<a href=\"index.php?page=Register\">TEXT</a>`
+Das Forumrecht heißt:
+"Kann gefilterte Inhalte sehen"
 
-
-Diverse Regular Expressions
-
-    URLs:
-        HTML: <a href=*>*</a>
-        BB-Code: [url*[/url]
-
-    Video:
-        HTML: <object*</object>
-        BB-Code:
-        [youtube]*[/youtube]
-        [myvideo]*[/myvideo]
-        [myspace]*[/myspace]
-        [googlevideo]*[/googlevideo]
-        [clipfish]*[/clipfish]
-        [sevenload]*[/sevenload]
-        [video]*[/video]
-
-    Quotes:
-		HTML: <blockquote class="quoteBox">*</blockquote>
-    	BB-Code: [quote*
-
-	Codeblöcke (PHP, MySQL, usw):
-	    HTML: <div class="codeBox">*<div>*<table>*</table>*</div>*</div>
-	    BB-Code:
-	    [code]*code]
-	    [php]*[/php]
-	    [mysql]*[/mysql]
-
-	Bilder:
-	    HTML: <img*>
-	    BB-Code:
-	    [img]*[/img]
-
-Links
-    Regular Expressions: http://www.regenechsen.de/phpwcms/index.php?regex
-    RegEx?-Modifikatoren: http://www.regenechsen.de/phpwcms/index.php?regex_allg_liste
+Damit kann man auf Forenebene die Filterung für beliebige Gruppen und Benutzer ein- und ausschalten.

@@ -5,20 +5,20 @@
 	<category name="wcf.acp.option">
 		<item name="wcf.acp.option.category.board.post.filter"><![CDATA[Beitragsinhalte filtern]]></item>
 		<item name="wcf.acp.option.category.board.post.filter.description"><![CDATA[]]></item>
-		<item name="wcf.acp.option.message_filter_group_view"><![CDATA[Filterbegriffe für BBCode]]></item>
-		<item name="wcf.acp.option.message_filter_group_view.description"><![CDATA[Gib hier eine Liste mit Worten und Begriffen an, die Du filtern lassen willst. Du kannst * als Platzhalter verwenden.]]></item>
-		<item name="wcf.acp.option.message_filter_group_view_links"><![CDATA[Links filtern]]></item>
-		<item name="wcf.acp.option.message_filter_group_view_links.description"><![CDATA[Ersetzt alle Links, ob E-Mail oder URL, intern oder extern.]]></item>
-		<item name="wcf.acp.option.message_filter_group_view_images"><![CDATA[Bilder filtern]]></item>
-		<item name="wcf.acp.option.message_filter_group_view_images.description"><![CDATA[Ersetzt alle Bilder.]]></item>
-		<item name="wcf.acp.option.message_filter_group_view_objects"><![CDATA[Objekte filtern]]></item>
-		<item name="wcf.acp.option.message_filter_group_view_objects.description"><![CDATA[Ersetzt eingebettete Objekte wie z.B. Videos.]]></item>
-		<item name="wcf.acp.option.message_filter_group_view_quotes"><![CDATA[Zitate filtern]]></item>
-		<item name="wcf.acp.option.message_filter_group_view_quotes.description"><![CDATA[Ersetzt Zitate.]]></item>
-		<item name="wcf.acp.option.message_filter_group_view_code"><![CDATA[Code filtern]]></item>
-		<item name="wcf.acp.option.message_filter_group_view_code.description"><![CDATA[Ersetzt Codeblöcke wie MySQL, PHP usw.]]></item>
-		<item name="wcf.acp.option.message_filter_group_view_shorten"><![CDATA[Text kürzen]]></item>
-		<item name="wcf.acp.option.message_filter_group_view_shorten.description"><![CDATA[Kürzt Text auf die angegebene Anzahl an Zeichen. -1 schaltet das Feature ab.]]></item>
+		<item name="wcf.acp.option.message_filter_thread_view"><![CDATA[Filterbegriffe für BBCode]]></item>
+		<item name="wcf.acp.option.message_filter_thread_view.description"><![CDATA[Gib hier eine Liste mit Worten und Begriffen an, die Du filtern lassen willst. Du kannst * als Platzhalter verwenden.]]></item>
+		<item name="wcf.acp.option.message_filter_thread_view_links"><![CDATA[Links filtern]]></item>
+		<item name="wcf.acp.option.message_filter_thread_view_links.description"><![CDATA[Ersetzt alle Links, ob E-Mail oder URL, intern oder extern.]]></item>
+		<item name="wcf.acp.option.message_filter_thread_view_images"><![CDATA[Bilder filtern]]></item>
+		<item name="wcf.acp.option.message_filter_thread_view_images.description"><![CDATA[Ersetzt alle Bilder.]]></item>
+		<item name="wcf.acp.option.message_filter_thread_view_objects"><![CDATA[Objekte filtern]]></item>
+		<item name="wcf.acp.option.message_filter_thread_view_objects.description"><![CDATA[Ersetzt eingebettete Objekte wie z.B. Videos.]]></item>
+		<item name="wcf.acp.option.message_filter_thread_view_quotes"><![CDATA[Zitate filtern]]></item>
+		<item name="wcf.acp.option.message_filter_thread_view_quotes.description"><![CDATA[Ersetzt Zitate.]]></item>
+		<item name="wcf.acp.option.message_filter_thread_view_code"><![CDATA[Code filtern]]></item>
+		<item name="wcf.acp.option.message_filter_thread_view_code.description"><![CDATA[Ersetzt Codeblöcke wie MySQL, PHP usw.]]></item>
+		<item name="wcf.acp.option.message_filter_thread_view_shorten"><![CDATA[Text kürzen]]></item>
+		<item name="wcf.acp.option.message_filter_thread_view_shorten.description"><![CDATA[Kürzt Text auf die angegebene Anzahl an Zeichen. -1 schaltet das Feature ab.]]></item>
 		<item name="wcf.acp.option.module_filter_content"><![CDATA[Filter]]></item>
 		<item name="wcf.acp.option.module_filter_content.description"><![CDATA[Aktiviert die Möglichkeit, Inhalte für bestimmte Gruppen zu filtern]]></item>
 		<item name="wcf.acp.option.module_filter_feeds"><![CDATA[Filter Feeds]]></item>
@@ -31,8 +31,8 @@
 	</category>
 
 	<category name="wbb.thread">
-		<item name="wbb.thread.filtergroupmessage"><![CDATA[ [url='{PAGE_URL}/index.php?page=Register'](Dieser Begriff wurde für dich ausgeblendet. Um ihn doch lesen zu können solltest Du dich registrieren/freischalten lassen!)[/url] ]]></item>
-		<item name="wbb.thread.filtergrouptruncatedmessage"><![CDATA[[url='{PAGE_URL}/index.php?page=Register'](Dieser Beitrag wurde gekürzt. Um ihn doch komplett lesen zu können solltest Du dich registrieren/freischalten lassen!)[/url]]]></item>
+		<item name="wbb.thread.filterthreadmessage"><![CDATA[ [url='{PAGE_URL}/index.php?page=Register'](Dieser Begriff wurde für dich ausgeblendet. Um ihn doch lesen zu können solltest Du dich registrieren/freischalten lassen!)[/url] ]]></item>
+		<item name="wbb.thread.filterthreadtruncatedmessage"><![CDATA[[url='{PAGE_URL}/index.php?page=Register'](Dieser Beitrag wurde gekürzt. Um ihn doch komplett lesen zu können solltest Du dich registrieren/freischalten lassen!)[/url]]]></item>
 	</category>
 
 	<category name="wbb.acp.board">

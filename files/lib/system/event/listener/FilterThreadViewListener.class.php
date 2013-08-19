@@ -7,8 +7,39 @@
  * Lizenz: CC Namensnennung-Keine kommerzielle Nutzung-Keine Bearbeitung
  * http://creativecommons.org/licenses/by-nc-nd/3.0/de/
  */
-class FilterGroupView
+
+require_once (WCF_DIR . 'lib/system/event/EventListener.class.php');
+
+/**
+ * Filter threadview for groups
+ *
+ * @author Toby
+ * @package com.toby.wbb.filterguestview
+ */
+class FilterThreadViewListener implements EventListener
 {
+	/**
+	 *
+	 * @see EventListener::execute()
+	 */
+	public function execute($eventObj, $className, $eventName)
+	{
+		if (!MODULE_FILTER_CONTENT ||
+			$eventObj->board->getPermission('canViewFilteredContent'))
+			return;
+
+		foreach ($eventObj->postList->posts as $id => $postObj)
+		{
+			// disable message cache, as we just want BBCodes...
+			$eventObj->postList->posts[$id]->messageCache = '';
+			$text = $postObj->message;
+
+			$filtered =  FilterThreadViewListener :: filter($text);
+
+			$eventObj->postList->posts[$id]->message = $filtered;
+		}
+	}
+
 	/**
 	 * filter given data for groups
 	 *
@@ -21,30 +52,30 @@ class FilterGroupView
 		$filterRules = array ();
 		$filterRulesHtml = array ();
 
-		if (MESSAGE_FILTER_GROUP_VIEW_CODE)
+		if (MESSAGE_FILTER_THREAD_VIEW_CODE)
 		{
 			$filterRules[] = '[code]*[/code]';
 			$filterRules[] = '[php]*[/php]';
 			$filterRules[] = '[mysql]*[/mysql]';
 		}
 
-		if (MESSAGE_FILTER_GROUP_VIEW_QUOTES)
+		if (MESSAGE_FILTER_THREAD_VIEW_QUOTES)
 		{
 			$filterRules[] = '[quote*[/quote]';
 		}
 
-		if (MESSAGE_FILTER_GROUP_VIEW_LINKS)
+		if (MESSAGE_FILTER_THREAD_VIEW_LINKS)
 		{
 			$filterRules[] = '[url*[/url]';
 			$filterRules[] = '[email*[/email]';
 		}
 
-		if (MESSAGE_FILTER_GROUP_VIEW_IMAGES)
+		if (MESSAGE_FILTER_THREAD_VIEW_IMAGES)
 		{
 			$filterRules[] = '[img]*[/img]';
 		}
 
-		if (MESSAGE_FILTER_GROUP_VIEW_OBJECTS)
+		if (MESSAGE_FILTER_THREAD_VIEW_OBJECTS)
 		{
 			$filterRules[] = '[youtube]*[/youtube]';
 			$filterRules[] = '[myvideo]*[/myvideo]';
@@ -54,15 +85,15 @@ class FilterGroupView
 			$filterRules[] = '[sevenload]*[/sevenload]';
 		}
 
-		if (MESSAGE_FILTER_GROUP_VIEW_SHORTEN != -1)
+		if (MESSAGE_FILTER_THREAD_VIEW_SHORTEN != -1)
 		{
 			$text = self :: truncate($text,
-										MESSAGE_FILTER_GROUP_VIEW_SHORTEN);
+					MESSAGE_FILTER_THREAD_VIEW_SHORTEN);
 		}
 
 		$filterRulesOwn = explode("\n",
-								preg_replace("/\r+/", '',
-											MESSAGE_FILTER_GROUP_VIEW));
+				preg_replace("/\r+/", '',
+						MESSAGE_FILTER_THREAD_VIEW));
 		$filterRules = $filterRules + ArrayUtil :: trim($filterRulesOwn);
 
 
@@ -73,11 +104,11 @@ class FilterGroupView
 			$filterRule = '/' . $filterRule . '/isU';
 
 			$text = preg_replace($filterRule,
-								WCF :: getLanguage()->get(
-														'wbb.thread.filtergroupmessage',
-														array (
-																'PAGE_URL' => PAGE_URL
-														)), $text);
+					WCF :: getLanguage()->get(
+							'wbb.thread.filterthreadmessage',
+							array (
+									'PAGE_URL' => PAGE_URL
+							)), $text);
 		}
 
 		return $text;
@@ -112,10 +143,10 @@ class FilterGroupView
 		}
 
 		// add the defined ending to the text
-		$truncate .= ' ' . WCF :: getLanguage()->get('wbb.thread.filtergrouptruncatedmessage',
-												array (
-													'PAGE_URL' => PAGE_URL
-												));
+		$truncate .= ' ' . WCF :: getLanguage()->get('wbb.thread.filterthreadtruncatedmessage',
+				array (
+						'PAGE_URL' => PAGE_URL
+				));
 
 		return $truncate;
 	}

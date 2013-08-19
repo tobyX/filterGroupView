@@ -7,15 +7,9 @@
  * http://creativecommons.org/licenses/by-nc-nd/3.0/de/
  */
 require_once (WCF_DIR . 'lib/system/event/EventListener.class.php');
-require_once (WBB_DIR . 'lib/util/FilterGroupView.class.php');
+require_once (WBB_DIR . 'lib/system/event/listener/FilterGroupViewListener.class.php');
 
-/**
- * Filter threadview for guests
- *
- * @author Toby
- * @package com.toby.wbb.filterguestview
- */
-class FilterGroupViewPostsFeedListener implements EventListener
+class FilterThreadViewThreadsFeedListener implements EventListener
 {
 	/**
 	 *
@@ -26,14 +20,16 @@ class FilterGroupViewPostsFeedListener implements EventListener
 		if (!MODULE_FILTER_CONTENT || !MODULE_FILTER_FEEDS)
 			return;
 
-		$c = count($eventObj->posts);
-		for($i = 0; $i < $c; $i++)
+		foreach ($eventObj->threads as $id => $threadObj)
 		{
-			$text = $eventObj->posts[$i]->message;
+			if ($threadObj->post)
+				$text = $threadObj->post->message;
+			else
+				continue;
 
-			$filtered = FilterGroupView :: filter($text);
+			$filtered = FilterThreadViewListener :: filter($text);
 
-			$eventObj->posts[$i]->message = $filtered;
+			$eventObj->threads[$id]->post->message = $filtered;
 		}
 	}
 }

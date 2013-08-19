@@ -19,38 +19,38 @@
 				<optiontype>boolean</optiontype>
 				<default>0</default>
 			</option>
-			<option name="message_filter_group_view_links">
+			<option name="message_filter_thread_view_links">
 				<categoryname>board.post.filter</categoryname>
 				<optiontype>boolean</optiontype>
 				<showorder>1</showorder>
 			</option>
-			<option name="message_filter_group_view_images">
+			<option name="message_filter_thread_view_images">
 				<categoryname>board.post.filter</categoryname>
 				<optiontype>boolean</optiontype>
 				<showorder>2</showorder>
 			</option>
-			<option name="message_filter_group_view_objects">
+			<option name="message_filter_thread_view_objects">
 				<categoryname>board.post.filter</categoryname>
 				<optiontype>boolean</optiontype>
 				<showorder>3</showorder>
 			</option>
-			<option name="message_filter_group_view_quotes">
+			<option name="message_filter_thread_view_quotes">
 				<categoryname>board.post.filter</categoryname>
 				<optiontype>boolean</optiontype>
 				<showorder>4</showorder>
 			</option>
-			<option name="message_filter_group_view_code">
+			<option name="message_filter_thread_view_code">
 				<categoryname>board.post.filter</categoryname>
 				<optiontype>boolean</optiontype>
 				<showorder>5</showorder>
 			</option>
-			<option name="message_filter_group_view_shorten">
+			<option name="message_filter_thread_view_shorten">
 				<categoryname>board.post.filter</categoryname>
 				<optiontype>integer</optiontype>
 				<showorder>6</showorder>
 				<defaultvalue>-1</defaultvalue>
 			</option>
-			<option name="message_filter_group_view">
+			<option name="message_filter_thread_view">
 				<categoryname>board.post.filter</categoryname>
 				<optiontype>textarea</optiontype>
 				<showorder>7</showorder>

@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <!DOCTYPE package SYSTEM "DTD/package.dtd">
-<package name="com.toby.wbb.filtergroupview">
+<package name="com.toby.wbb.filterthreadview">
 
 	<packageInformation>
-		<packageName>Filter Group View</packageName>
+		<packageName>Filter Thread View</packageName>
 		<isUnique>1</isUnique>
-		<packageDescription>Themenansicht für beliebige Gruppen filtern, d.h. bestimmte Begriffe ersetzen lassen</packageDescription>
+		<packageDescription>Themenansicht für beliebige Gruppen filtern, d.h. bestimmte Begriffe ersetzen oder kürzen lassen</packageDescription>
 		<standalone>0</standalone>
 		<version>1.0.0</version>
-		<date>2013-08-18</date>
+		<date>2013-08-19</date>
 		<plugin>com.woltlab.wbb</plugin>
 	</packageInformation>
 

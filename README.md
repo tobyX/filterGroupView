@@ -1,4 +1,4 @@
-filterGroupView
+filterThreadView
 ===============
 
 Plugin for WBB forum, allows to filter the display of posts for any groups
